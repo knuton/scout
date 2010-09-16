@@ -9,8 +9,9 @@ var scout = function () {
       url: queryURL,
       type: 'GET',
       data: queryData,
+      // TODO Use in xdomainajax.js
       dataFilter: extractor,
-      success: function (response) { console.log(response) }
+      success: function (response) { console.log(response); }
     });
   };
   

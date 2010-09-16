@@ -14,8 +14,8 @@ scout.vendors = function () {
 
     all : function () {
       var complete = [];
-      for (key in this) {
-        if (typeof this[key] === 'object' && isComplete(this[key])) complete.push(this[key]);
+      for (var vendorKey in this) {
+        if (typeof this[vendorKey] === 'object' && isComplete(this[vendorKey])) complete.push(this[vendorKey]);
       }
 
       return complete.sort(function (a, b) {
@@ -27,7 +27,7 @@ scout.vendors = function () {
     emusic : {
       name : 'eMusic',
       website : 'http://emusic.com/',
-      searchURI : 'http://emusic.com/',
+      searchURI : 'http://emusic.com/'
     },
 
     finetunes : {
