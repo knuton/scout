@@ -26,7 +26,7 @@ jQuery.ajax = (function(_ajax){
         
         var url = o.url;
         
-        if ( /get/i.test(o.type) && !/json/i.test(o.dataType) && isExternal(url) ) {
+        if ( (typeof o.type === 'undefined' || /get/i.test(o.type)) && !/json/i.test(o.dataType) && isExternal(url) ) {
             
             // Manipulate options so that JSONP-x request is made to YQL
             
@@ -55,7 +55,6 @@ jQuery.ajax = (function(_ajax){
                     
                     if (_success) {
                         // Fake XHR callback.
-                        console.log(data);
                         _success.call(this, {
                             responseText: data.results[0]
                                 // YQL screws with <script>s
