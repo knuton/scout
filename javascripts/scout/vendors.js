@@ -1,6 +1,6 @@
 scout.vendors = function () {
   
-  var properties = ['name', 'website', 'searchURI', 'parameterName'];
+  var properties = ['name', 'website', 'searchURI', 'parameterName', 'extractor'];
 
   var isComplete = function (vendor) {
     for (var i = 0; i < properties.length; i++) {
